@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Lista } from '../models/lista.model';
 
 @Injectable({
   providedIn: 'root'
@@ -6,5 +7,12 @@ import { Injectable } from '@angular/core';
 export class DeseosService {
 
   listas: any [] = [];
-  constructor() { }
+
+  constructor() { 
+    const lista1 = new Lista('recolectar piedras del infinito');
+    const lista2 = new Lista('Heroes a desaparecer');
+    this.listas.push(lista1,lista2);
+    console.log(this.listas);
+    
+  }
 }
